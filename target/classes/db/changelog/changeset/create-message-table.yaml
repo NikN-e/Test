@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-message
+      author: Nikolay Vasiliev
+      changes:
+        - createTable:
+            tableName: message
+            columns:
+              - column:
+                  name: message_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: aut
+              - column:
+                  name: date
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: text
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: chat_id
+                  type: int
+                  constraints:
+                    foreignKeyName: aut

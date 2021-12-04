@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-daily_domains
+      author: Nikolay Vasiliev
+      changes:
+        - createTable:
+            tableName: daily_domains
+            columns:
+              - column:
+                  name: domainname
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: hotness
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: x_value
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: links
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: visitors
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: registrar
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: old
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: delete_date
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: rkn
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: judicial
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: block
+                  type: boolean
+                  constraints:
+                    nullable: false
